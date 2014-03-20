@@ -1,0 +1,92 @@
+///*------------------------------------*/
+//    $BUTTONS-GROUP
+///*------------------------------------*/
+
+ul.button-group { 
+	list-style: none; 
+	padding: 0; 
+	margin: @button-group-margin; 
+	overflow: ; 
+}
+ul.button-group li { 
+	padding: 0; 
+	margin: 0 0 0 -1px; 
+	float: left;
+	display:block;
+}
+ul.button-group li:first-child { 
+	margin-left: 0; 
+}
+ul.button-group.radius li:first-child a.button, 
+ul.button-group.radius li:first-child a.button.radius, 
+ul.button-group.radius li:first-child a.button.rounded { 
+	 .border-radius(@button-group-border-radius 0 0 @button-group-border-radius);
+}
+ul.button-group.radius li + li a.button, 
+ul.button-group.radius li + li a.button.radius, 
+ul.button-group.radius li + li a.button.rounded { 
+	border-radius: 0; 
+}
+ul.button-group.radius li:last-child a.button, 
+ul.button-group.radius li:last-child a.button.radius, 
+ul.button-group.radius li:last-child a.button.rounded { 
+	.border-radius(0 @button-group-border-radius @button-group-border-radius 0);
+}
+ul.button-group.rounded li:first-child a.button, 
+ul.button-group.rounded li:first-child a.button.radius, 
+ul.button-group.rounded li:first-child a.button.rounded { 
+	.border-round(1000px 0 0 1000px);
+}
+ul.button-group.rounded li + li a.button, 
+ul.button-group.rounded li + li a.button.radius, 
+ul.button-group.rounded li + li a.button.rounded { 
+	border-radius: 0; 
+}
+ul.button-group.rounded li:last-child a.button, 
+ul.button-group.rounded li:last-child a.button.radius, 
+ul.button-group.rounded li:last-child a.button.rounded { 
+	.border-round(0 1000px 1000px 0);
+}
+
+ul.button-group.even {
+	a.button { width: 100%; }
+	>li {display: block; height: auto; float: left; }
+}
+ul.button-group.even.two-up { 
+	@gutter:@grid-gutter-collapse;
+	>li { .bloc-grid(2) }
+}
+ul.button-group.even.three-up { 
+	@gutter:@grid-gutter-collapse;
+	>li { .bloc-grid(2) }
+}
+ul.button-group.even.four-up { 
+	@gutter:@grid-gutter-collapse;
+	>li { .bloc-grid(2) }
+}
+ul.button-group.even.five-up { 
+	@gutter:@grid-gutter-collapse;
+	>li { .bloc-grid(5) }
+}
+ul.button-group.even.six-up { 
+	@gutter:@grid-gutter-collapse;
+	>li { .bloc-grid(2) }
+}
+
+@media only screen and (max-width: 480px) {
+	ul.button-group.even {
+		margin-left:-@grid-gutter;
+		> li {display: block; height: auto; float: left; }
+		&.two-up, &.three-up, &.four-up, &.five-up, &.six-up {
+			@gutter:@grid-gutter;
+			> li { 
+				.bloc-grid(2);
+				a.button { .border-radius; }
+			}
+		}
+	}
+}
+
+div.button-bar { overflow: hidden; }
+div.button-bar ul.button-group { float: left; margin-right: 8px; }
+div.button-bar ul.button-group:last-child { margin-left: 0; }

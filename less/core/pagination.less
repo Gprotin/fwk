@@ -1,0 +1,186 @@
+///*------------------------------------*/
+//    $PAGINATION
+///*------------------------------------*/
+
+ul.pagination { 
+	display: block;
+	font-family: @pagination-font;
+	font-weight: @pagination-font-weight;
+	.clearfix;
+}
+ul.pagination li { 
+	float: left; 
+	display: block;
+	color: @pagination-color-link; 
+	margin-left: @pagination-margin; 
+}
+
+ul.pagination li a { 
+	display: block;
+	background: @pagination-color; 
+	padding: @pagination-padding; 
+	color: @pagination-color-link;
+	&:hover,&:focus {
+		color: @pagination-color-link-hover;
+		background:@pagination-color-hover;
+	}
+}
+
+ul.pagination li.unavailable a { 
+	cursor: default; 
+	background: @pagination-color-unavailable;
+	color: @pagination-color-unavailable-link;
+}
+
+ul.pagination li.current a { 
+	cursor: default; 
+	background: @pagination-color-current;
+	color: @pagination-color-current-link;
+}
+
+/*   borders   */
+.pagination.border-link li a {
+	border:@pagination-border-size @pagination-border-type @pagination-border-color;
+}
+.pagination.border-link li.unavailable a {
+	border:none;
+}
+
+/*   centered   */
+.pagination-centered {
+	text-align: center; 
+	ul.pagination > li { float: none; display: inline-block; }
+}
+
+
+.pagination-align-right {
+	text-align: right; 
+	ul.pagination > li { float: none; display: inline-block; }
+}
+
+/* reset margin in panel */
+.panel > ul.pagination {
+	margin-bottom:0;
+}
+
+/* pagination in panels */
+.panel > .pagination {
+	> li a {
+		color:@color-link;
+		&:hover, &:focus {
+			background:lighten(@color,5%);
+		}
+	}
+	> li.current a {
+		color:@color-text;
+		background:darken(@color,5%);
+	}
+	> li.unavailable a {
+		color:lighten(@color,25%);
+		&:hover, &:focus {
+			background:none;
+		}
+	}
+	&.border-link li a {
+		border:@pagination-border-size @pagination-border-type @color-border;
+	}
+	&.border-link li.unavailable a {
+		border:none;
+	}
+}
+.panel.main > .pagination {
+	> li a {
+		color:@color-link-main;
+		&:hover, &:focus {
+			background:lighten(@color-main,5%);
+		}
+	}
+	> li.current a {
+		color:@color-text-main;
+		background:darken(@color-main,5%);
+	}
+	> li.unavailable a {
+		color:lighten(@color-main,25%);
+		&:hover, &:focus {
+			background:none;
+		}
+	}
+	&.border-link li a {
+		border:@pagination-border-size @pagination-border-type @color-border-main;
+	}
+	&.border-link li.unavailable a {
+		border:none;
+	}
+}
+.panel.light > .pagination { 
+	> li a {
+		color:@color-link-light;
+		&:hover, &:focus {
+			background:lighten(@color-light,5%);
+		}
+	}
+	> li.current a {
+		color:@color-text-light;
+		background:darken(@color-light,5%);
+	}
+	> li.unavailable a {
+		color:lighten(@color-light,25%);
+		&:hover, &:focus {
+			background:none;
+		}
+	}
+	&.border-link li a {
+		border:@pagination-border-size @pagination-border-type @color-border-light;
+	}
+	&.border-link li.unavailable a {
+		border:none;
+	}
+}
+.panel.dark > .pagination {
+	> li a {
+		color:@color-link-dark;
+		&:hover, &:focus {
+			background:lighten(@color-dark,5%);
+		}
+	}
+	> li.current a {
+		color:@color-text-dark;
+		background:darken(@color-dark,5%);
+	}
+	> li.unavailable a {
+		color:lighten(@color-dark,25%);
+		&:hover, &:focus {
+			background:none;
+		}
+	}
+	&.border-link li a {
+		border:@pagination-border-size @pagination-border-type @color-border-dark;
+	}
+	&.border-link li.unavailable a {
+		border:none;
+	}
+}
+.panel.pop > .pagination {
+	> li a {
+		color:@color-link-pop;
+		&:hover, &:focus {
+			background:lighten(@color-pop,5%);
+		}
+	}
+	> li.current a {
+		color:@color-text-pop;
+		background:darken(@color-pop,5%);
+	}
+	> li.unavailable a {
+		color:lighten(@color-pop,25%);
+		&:hover, &:focus {
+			background:none;
+		}
+	}
+	&.border-link li a {
+		border:@pagination-border-size @pagination-border-type @color-border-pop;
+	}
+	&.border-link li.unavailable a {
+		border:none;
+	}
+}

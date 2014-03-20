@@ -1,0 +1,63 @@
+// Price tag
+
+// Important put this element in .image-bloc
+.price-tag {
+	margin:@price-tag-margin;
+	padding:@price-tag-padding;
+	position:absolute;
+	top:0px;
+	right:auto;
+	bottom:auto;
+	left:0px;
+	background:@color;
+	color:@color-text;
+	.font-size(@price-tag-font-size);
+
+	&.light {
+		background:@color-light;
+		color:@color-text-light;
+	}
+	&.dark {
+		background:@color-dark;
+		color:@color-text-dark;
+	}
+	&.pop {
+		background:@color-pop;
+		color:@color-text-pop;
+	}
+	&.warning {
+		background:@color-warning;
+		color:@color-text-warning;
+	}
+	&.alert {
+		background:@color-alert;
+		color:@color-text-alert;
+	}
+	&.success {
+		background:@color-success;
+		color:@color-text-success;
+	}
+
+	&.lead {
+		.font-size(@price-tag-font-size-lead);
+	}
+
+	&.bottom-right {
+		top:auto;
+		right:0px;
+		bottom:0px;
+		left:auto;
+	}
+	&.bottom-left {
+		top:auto;
+		right:auto;
+		bottom:0px;
+		left:0px;
+	}
+	&.top-right {
+		top:0px;
+		right:0px;
+		bottom:auto;
+		left:auto;
+	}
+}

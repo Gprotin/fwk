@@ -1,0 +1,34 @@
+///*------------------------------------*/
+//    $PAGINATION MOBILE
+///*------------------------------------*/
+
+/* phone */
+@media only screen and (max-width: 480px) {
+	ul.pagination.mobile li {
+		display:none;
+	}
+	ul.pagination.mobile {
+		.clearfix;
+		li {
+			float:left;
+			width:50%;
+			padding:0;
+			margin:0;
+			text-align: center;
+		}
+		li:first-child {
+			display:block;
+			a:after {
+				content: " Precedent";
+			}
+		}
+		li:last-child {
+			display:block;
+			float:left;
+			width:50%;
+			a:before {
+				content: "Suivant ";
+			}
+		}
+	}
+}

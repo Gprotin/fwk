@@ -1,0 +1,107 @@
+//* reset
+h3 {
+	.font-size(@font-size*1.2);
+}
+h3, h4, h5, h6 {
+	font-family:@font;
+	text-transform:uppercase;
+	margin-bottom: @margin-small;
+}
+
+#contenu {
+	margin-bottom:20px;
+	margin-top:20px;
+}
+
+#promotion {
+	margin-bottom:20px;
+}
+
+#slide {
+	#slider {
+		border:1px solid @color-dark;
+		border-bottom:0;
+	}
+	#promos {
+		border:1px solid @color-dark;
+		border-bottom:0;
+		img {
+			display:block;
+			line-height: 0;
+		}
+	}
+}
+
+.liste-produits {
+	li {
+		.link-hover {
+			z-index:999;
+			position:absolute;
+			color:@color-text-pop;
+			right:0;
+			width:52px;
+			height:52px;
+			text-align: right;
+			background: url(../img/bg-link-hover.png) top left;
+			padding:3px 3px 0 0;
+			pointer-events:none;
+			display: none;
+		}
+	}
+}
+
+#arguments {
+	margin-bottom:0;
+	li {
+		text-transform: uppercase;
+		transition:all 0.2s ease;
+		&:hover{
+			color:@color-pop;
+		}
+	}
+}
+
+.liste-actualites {
+	.actu {
+		margin-bottom: @margin;
+		border-bottom: 1px solid @color-dark;
+		padding:@margin-small;
+		h3 a {
+			&:hover {
+				color:@color-pop;
+			}
+		}
+	}
+}
+
+#sidebar {
+	h2 {
+		text-transform: uppercase;
+		border-bottom:1px solid @color-dark;
+	}
+	.link-list {
+		&.block {
+			li a {
+				display: block;
+				font-weight: 300;
+				text-transform: uppercase;
+				&:hover, &:focus {
+					background:@color-pop;
+					color:@color-link-pop;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	#panier { position:relative; }
+}
+
+#footer {
+	border-top:3px solid @color-pop;
+	margin-bottom:0;
+	#ressurance {
+		margin-bottom:0;
+	}
+}

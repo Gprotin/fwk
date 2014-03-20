@@ -1,0 +1,42 @@
+///*------------------------------------*/
+//    $LINK-LIST
+///*------------------------------------*/
+
+/*  tablets  */
+@media only screen and (max-width: 767px) {
+	.link-list.compress li { 
+		display:none; 
+		width:100%; 
+		float:none; 
+	}
+	.link-list.compress li:first-child, 
+	.link-list.compress li.current,
+	.link-list.compress li.current_page_item { display:block; }
+	.link-list.compress:hover li, .link-list.compress:active li { display:block; }
+	.link-list li ul { display: none; width:100%; position: relative; }
+	.panel.border.compress.link-list li ul { border:none;}
+}
+
+/* smartphone  */
+@media only screen and (max-width: 480px) {
+	.link-list.mobile {
+		&.block {
+			> li {
+				float:left;
+				width:50%;
+			}
+			> li a {
+				display: block;
+				&:hover, &:focus {
+					background:lighten(@color,5%);
+				}
+			}
+		}
+		&.block-grid {
+			> li {
+				float:none;
+				width:100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,198 @@
+///*------------------------------------*/
+//    $BUTTONS
+///*------------------------------------*/
+.button { 
+	.border-box;
+	width: auto; 
+	cursor: pointer; 
+	display: inline-block; 
+	font-family: @font;
+	font-weight: @font-button-weight; 
+	line-height: @button-line-height; 
+	outline: none; 
+	padding: @button-padding; 
+	position: relative; 
+	text-align: @button-text-align; 
+	text-decoration: none; 
+	transition:all 0.3s ease; 
+	.font-size(@font-button-size);
+	background: @color-button;
+    border:1px solid @color-border;
+    color: @color-button-text !important;
+    margin-bottom:@margin-small;
+    box-shadow:@button-box-shadow;
+	&:hover {
+		box-shadow: @button-box-shadow-hover;
+		color: @color-button-text;
+		background: @color-button-hover;
+	}
+	&:active,&:focus { 
+		box-shadow: @button-box-shadow-active;
+	}
+}
+
+.button.large { .font-size(@font-button-size-large); padding:@button-padding-large; }
+.button.medium { .font-size(@font-button-size-medium); padding:@button-padding-medium;}
+.button.small { .font-size(@font-button-size-small); padding:@button-padding-small; }
+
+.button.radius { .border-radius(@button-border-radius); }
+.button.round { .border-round; }
+.button.full-width { width: 100%; text-align: center; padding-left: 0 !important; padding-right: 0 !important; }
+.button.left-align { text-align: left; text-indent: 12px; }
+.button.disabled, .button[disabled] { opacity: 0.6; cursor: default; background: @color-button-disabled; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+
+/* Colors */
+.gradient.button {
+	background: @color-button-gradient;
+	&:hover {
+		background: @color-button-gradient-hover;
+	}
+	&:active {
+		background: @color-button-gradient-active;
+	}
+}
+/* main button */
+.main.button {
+	background: @color-button-main;
+    border:1px solid @color-border-main;
+    color: @color-button-text-main !important;
+	&:hover {
+		color: @color-button-text-main !important;
+		background: @color-button-main-hover;
+	}
+}
+.main.gradient.button {
+	background: @color-button-main-gradient;
+	&:hover {
+		background: @color-button-main-gradient-hover;
+	}
+	&:active {
+		background: @color-button-main-gradient-active;
+	}
+}
+/* light button */
+.light.button {
+	background: @color-button-light;
+    border:1px solid @color-border-light;
+    color: @color-button-text-light !important;
+	&:hover {
+		color: @color-button-text-light !important;
+		background: @color-button-light-hover;
+	}
+}
+.light.gradient.button {
+	background: @color-button-light-gradient;
+	&:hover {
+		background: @color-button-light-gradient-hover;
+	}
+	&:active {
+		background: @color-button-light-gradient-active;
+	}
+}
+/* dark button */
+.dark.button {
+	background: @color-button-dark;
+    border:1px solid @color-border-dark;
+    color: @color-button-text-dark !important;
+	&:hover {
+		color: @color-button-text-dark !important;
+		background: @color-button-dark-hover;
+	}
+}
+.dark.gradient.button {
+	background: @color-button-dark-gradient;
+	&:hover {
+		background: @color-button-dark-gradient-hover;
+	}
+	&:active {
+		background: @color-button-dark-gradient-active;
+	}
+}
+/* pop button */
+.pop.button {
+	background: @color-button-pop;
+    border:1px solid @color-border-pop;
+    color: @color-button-text-pop !important;
+	&:hover {
+		color: @color-button-text-pop !important;
+		background: @color-button-pop-hover;
+	}
+}
+.pop.gradient.button {
+	background: @color-button-pop-gradient;
+	&:hover {
+		background: @color-button-pop-gradient-hover;
+	}
+	&:active {
+		background: @color-button-pop-gradient-active;
+	}
+}
+/* warning button */
+.warning.button {
+	background: @color-button-warning;
+    border:1px solid @color-border-warning;
+    color: @color-button-text-warning !important;
+	&:hover {
+		color: @color-button-text-warning !important;
+		background: @color-button-warning-hover;
+	}
+}
+.warning.gradient.button {
+	background: @color-button-warning-gradient;
+	&:hover {
+		background: @color-button-warning-gradient-hover;
+	}
+	&:active {
+		background: @color-button-warning-gradient-active;
+	}
+}
+/* alert button */
+.alert.button {
+	background: @color-button-alert;
+    border:1px solid @color-border-alert;
+    color: @color-button-text-alert !important;
+	&:hover {
+		color: @color-button-text-alert !important;
+		background: @color-button-alert-hover;
+	}
+}
+.alert.gradient.button {
+	background: @color-button-alert-gradient;
+	&:hover {
+		background: @color-button-alert-gradient-hover;
+	}
+	&:active {
+		background: @color-button-alert-gradient-active;
+	}
+}
+/* success button */
+.success.button {
+	background: @color-button-success;
+    border:1px solid @color-border-success;
+    color: @color-button-text-success !important;
+	&:hover {
+		color: @color-button-text-success !important;
+		background: @color-button-success-hover;
+	}
+}
+.success.gradient.button {
+	background: @color-button-success-gradient;
+	&:hover {
+		background: @color-button-success-gradient-hover;
+	}
+	&:active {
+		background: @color-button-success-gradient-active;
+	}
+}
+
+/* Don't use native buttons on iOS */
+input[type=submit].button, button.button { -webkit-appearance: none; }
+
+@media only screen and (max-width: 480px) { .button { display: block; }
+  button.button, input[type="submit"].button { width: 100%; padding-left: 0; padding-right: 0; } }
+/* Correct FF button padding */
+@-moz-document url-prefix() { button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner { border: none; padding: 0; }
+  input[type="submit"].tiny.button { padding: 3px 10px 4px; }
+  input[type="submit"].small.button { padding: 5px 14px 6px; }
+  input[type="submit"].button, input[type=submit].medium.button { padding: 5px; }
+  input[type="submit"].large.button { padding: 13px 30px 14px; } }

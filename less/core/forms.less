@@ -1,0 +1,309 @@
+///*------------------------------------*/
+//    $FORMS
+///*------------------------------------*/
+form { 
+	margin-bottom:@form-margin;
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="date"], 
+input[type="datetime"], 
+input[type="email"], 
+input[type="number"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="time"], 
+input[type="url"], 
+textarea, 
+select { 
+	margin: @form-input-margin; 
+	padding: @form-input-padding; 
+	height:  @form-input-height; 
+	width: 100%;
+	font-family: @form-input-font;
+	.font-size(@form-input-font-size);
+	border: @form-input-border-size @form-input-border-type @form-input-border-color;
+	.border-radius(@form-input-border-radius);
+	.box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.1)); 
+	color: @form-input-color-text; 
+	display: block; 
+	transition: all 0.15s linear;
+	&.oversize {
+		.font-size(@form-input-font-size-oversize);
+		padding:;
+	}
+	&:focus {
+		background: @form-input-color-focus; 
+		border-color: @form-input-border-color-focus;
+		outline: none !important; 
+	}
+	&[disabled] {
+		background-color: @form-input-color-disabled;
+	}
+}
+
+textarea { 
+	height: auto; 
+	padding:@form-select-padding; 
+	font-family:inherit;
+	resize:vertical;
+	transition:height 0s ease;
+	transition:border 0.2s ease;
+}
+select { 
+	width: 100%; 
+	padding:@form-select-padding; 
+}
+&.no-margin {
+	margin:0;
+	input[type="text"], 
+	input[type="password"], 
+	input[type="date"], 
+	input[type="datetime"], 
+	input[type="email"], 
+	input[type="number"], 
+	input[type="search"], 
+	input[type="tel"], 
+	input[type="time"], 
+	input[type="url"], 
+	textarea, 
+	select { 
+		margin: 0; 
+	}
+}
+
+/*  label  */
+label {
+	cursor: pointer; 
+	display: block; 
+	font-weight: @form-label-font-weight; 
+	margin-bottom: @form-label-margin;
+	&.right {
+		float: none; 
+		text-align: right;
+	}
+	&.inline {
+		line-height: @form-input-height; 
+		margin: @form-label-inline-margin;
+	}
+}
+
+/*   Prefix and Postfix   */
+.prefix, .postfix { 
+	display: block; 
+	position: relative; 
+	z-index: @form-prefix-zindex; 
+	text-align: @form-prefix-text-align; 
+	width: 100%; 
+	padding-top: 0; 
+	padding-bottom: 0;
+	height: @form-input-height; 
+	line-height: @form-input-height; 
+	background: @form-prefix-color;
+	border: @form-prefix-border-size @form-prefix-border-type @form-prefix-border-color;
+	&.main {
+		background: @color-main;
+		border-color:@color-border-main;
+		color:@color-text-main;
+	}
+	&.light {
+		background: @color-light;
+		border-color:@color-border-light;
+		color:@color-text-light;
+	}
+	&.dark {
+		background: @color-dark;
+		border-color:@color-border-dark;
+		color:@color-text-dark;
+	}
+	&.pop {
+		background: @color-pop;
+		border-color:@color-border-pop;
+		color:@color-text-pop;
+	}
+	&.warning {
+		background: @color-warning;
+		border-color:@color-border-warning;
+		color:@color-text-warning;
+	}
+	&.alert {
+		background: @color-alert;
+		border-color:@color-border-alert;
+		color:@color-text-alert;
+	}
+	&.success {
+		background: @color-success;
+		border-color:@color-border-success;
+		color:@color-text-success;
+	}
+}
+
+a.button.prefix, a.button.postfix { 
+	margin-bottom:0;
+	padding-left: 0;
+	padding-right: 0;
+	text-align: @form-prefix-text-align; 
+}
+
+/* Quantity ticker */
+.quantity-ticker { 
+    margin-bottom: 0;
+	list-style:none;
+	position:relative;
+	li {
+		height:50%;
+		margin:0;
+		padding:0;
+		text-align:@form-prefix-text-align;
+		a {
+			display:block;
+			line-height:0;
+			.font-size(12);
+			.cart_quantity_down {
+				content:'&#xf078';
+			}
+			.cart_quantity_up {
+				content:'&#xf077';
+			}
+		}
+	}
+}
+.prefix { 
+	left: 2px; 
+	.border-radius(@form-prefix-border-radius 0 0 @form-prefix-border-radius);
+}
+.postfix { 
+	right: 2px; 
+	.border-radius(0 @form-prefix-border-radius @form-prefix-border-radius 0);
+}
+
+/* forms in panel */
+.panel {
+	input[type="text"], 
+	input[type="password"], 
+	input[type="date"], 
+	input[type="datetime"], 
+	input[type="email"], 
+	input[type="number"], 
+	input[type="search"], 
+	input[type="tel"], 
+	input[type="time"], 
+	input[type="url"], 
+	textarea, 
+	select { 
+		border-color: @color-border;
+	}
+} 
+.panel-main {
+	input[type="text"], 
+	input[type="password"], 
+	input[type="date"], 
+	input[type="datetime"], 
+	input[type="email"], 
+	input[type="number"], 
+	input[type="search"], 
+	input[type="tel"], 
+	input[type="time"], 
+	input[type="url"], 
+	textarea, 
+	select { 
+		border-color:@color-border-main;
+	}
+} 
+.panel-light {
+	input[type="text"], 
+	input[type="password"], 
+	input[type="date"], 
+	input[type="datetime"], 
+	input[type="email"], 
+	input[type="number"], 
+	input[type="search"], 
+	input[type="tel"], 
+	input[type="time"], 
+	input[type="url"], 
+	textarea, 
+	select { 
+		border-color:@color-border-light;
+	}
+} 
+.panel-dark {
+	input[type="text"], 
+	input[type="password"], 
+	input[type="date"], 
+	input[type="datetime"], 
+	input[type="email"], 
+	input[type="number"], 
+	input[type="search"], 
+	input[type="tel"], 
+	input[type="time"], 
+	input[type="url"], 
+	textarea, 
+	select { 
+		border-color:@color-border-dark;
+	}
+} 
+.panel-pop {
+	input[type="text"], 
+	input[type="password"], 
+	input[type="date"], 
+	input[type="datetime"], 
+	input[type="email"], 
+	input[type="number"], 
+	input[type="search"], 
+	input[type="tel"], 
+	input[type="time"], 
+	input[type="url"], 
+	textarea, 
+	select { 
+		border-color:@color-border-pop;
+	}
+}  
+.panel-warning {
+	input[type="text"], 
+	input[type="password"], 
+	input[type="date"], 
+	input[type="datetime"], 
+	input[type="email"], 
+	input[type="number"], 
+	input[type="search"], 
+	input[type="tel"], 
+	input[type="time"], 
+	input[type="url"], 
+	textarea, 
+	select { 
+		border-color:@color-border-warning;
+	}
+}  
+.panel-alert {
+	input[type="text"], 
+	input[type="password"], 
+	input[type="date"], 
+	input[type="datetime"], 
+	input[type="email"], 
+	input[type="number"], 
+	input[type="search"], 
+	input[type="tel"], 
+	input[type="time"], 
+	input[type="url"], 
+	textarea, 
+	select { 
+		border-color:@color-border-alert;
+	}
+}  
+.panel-success {
+	input[type="text"], 
+	input[type="password"], 
+	input[type="date"], 
+	input[type="datetime"], 
+	input[type="email"], 
+	input[type="number"], 
+	input[type="search"], 
+	input[type="tel"], 
+	input[type="time"], 
+	input[type="url"], 
+	textarea, 
+	select { 
+		border-color:@color-border-success;
+	}
+} 

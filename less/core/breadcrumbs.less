@@ -1,0 +1,137 @@
+///*------------------------------------*/
+//    $BREADCRUMBS
+///*------------------------------------*/
+ul.breadcrumbs {
+	font-family: @breadcrumbs-font;
+	display: block; 
+	overflow: hidden; 
+	margin-bottom:@breadcrumbs-margin;
+	.font-size(@breadcrumbs-font-size);
+}
+
+ul.breadcrumbs li { 
+	margin: 0; 
+	padding: @breadcrumbs-padding-li; 
+	float: left; 
+	list-style: none; 
+}
+ul.breadcrumbs li a, ul.breadcrumbs li span { 
+	text-transform: @breadcrumbs-font-style; 
+	padding-left: @breadcrumbs-padding-element;
+	color:@breadcrumbs-link-color;
+	&:hover {
+		color:@breadcrumbs-link-color-hover;
+	}
+}
+ul.breadcrumbs li:first-child a, ul.breadcrumbs li:first-child span { 
+	padding-left: 0; 
+}
+ul.breadcrumbs li:before { 
+	content: @breadcrumbs-content; 
+	color: @breadcrumbs-content-color; 
+}
+ul.breadcrumbs li:first-child:before { content: " "; }
+
+ul.breadcrumbs li.current a { 
+	cursor: default;
+	color:@breadcrumbs-current-color;
+	&:hover, &:focus {
+		color:@breadcrumbs-current-color;
+	}
+}
+ul.breadcrumbs li.unavailable a { 
+	color: @breadcrumbs-color-unavailable; 
+	cursor: default;
+}
+
+/* reset margin in panel */
+.panel > ul.breadcrumbs {
+	margin-bottom:0;
+}
+
+/* breadcrumbs in panels */
+.panel .breadcrumbs {
+	> li a {
+		color:@color-link;
+		&:hover, &:focus {
+			color:@color-link-hover;
+		}
+	}
+	> li.current a {
+		color:@color-text;
+		&:hover, &:focus {
+			color:@color-text;
+		}
+	}
+	> li.unavailable a {
+		color:lighten(@color,25%);
+	}
+}
+.panel-main .breadcrumbs {
+	> li a {
+		color:@color-link-main;
+		&:hover, &:focus {
+			color:@color-link-main-hover;
+		}
+	}
+	> li.current a {
+		color:@color-text-main;
+		&:hover, &:focus {
+			color:@color-text-main;
+		}
+	}
+	> li.unavailable a {
+		color:lighten(@color-main,25%);
+	}
+}
+.panel-light .breadcrumbs {
+	> li a {
+		color:@color-link-light;
+		&:hover, &:focus {
+			color:@color-link-light-hover;
+		}
+	}
+	> li.current a {
+		color:@color-text-light;
+		&:hover, &:focus {
+			color:@color-text-light;
+		}
+	}
+	> li.unavailable a {
+		color:lighten(@color-light,25%);
+	}
+}
+.panel-dark .breadcrumbs {
+	> li a {
+		color:@color-link-dark;
+		&:hover, &:focus {
+			color:@color-link-dark-hover;
+		}
+	}
+	> li.current a {
+		color:@color-text-dark;
+		&:hover, &:focus {
+			color:@color-text-dark;
+		}
+	}
+	> li.unavailable a {
+		color:lighten(@color-dark,25%);
+	}
+}
+.panel-pop .breadcrumbs {
+	> li a {
+		color:@color-link-pop;
+		&:hover, &:focus {
+			color:@color-link-pop-hover;
+		}
+	}
+	> li.current a {
+		color:@color-text-pop;
+		&:hover, &:focus {
+			color:@color-text-pop;
+		}
+	}
+	> li.unavailable a {
+		color:lighten(@color-pop,25%);
+	}
+}

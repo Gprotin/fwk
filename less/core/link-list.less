@@ -1,0 +1,159 @@
+///*------------------------------------*/
+//    $LINK-LIST
+///*------------------------------------*/
+.link-list {
+	list-style: none;
+	margin-bottom:@link-list-margin;
+	font-family: @link-list-font;
+	line-height: 0;
+	.font-size(@link-list-font-size);
+	position: relative;
+	.clearfix;
+	> li {
+		float:left;
+		.clearfix;
+		a {
+			padding:@link-list-a-padding; 
+		}
+	}
+	&.block {
+		li a {
+			display: block;
+			&:hover, &:focus {
+				background:lighten(@color,5%);
+			}
+		}
+	}
+	&.vertical {
+		li {
+			float:none;
+			width:100%;
+			a {
+				line-height:1;
+				display: block;
+				padding:@link-list-vertical-a-padding;
+			}
+			ul {
+				list-style:none;
+				margin-bottom:0px;
+				li a {
+					padding-left:20px;
+				}
+			}
+		}
+	}
+	&.animated {
+		li {
+			a {
+				position:relative;
+				line-height:1;
+				&.caret {
+					float:right;
+					position:absolute;
+					top:0;
+					right:0;
+					padding:@link-list-vertical-caret-padding;
+					.font-size(16);
+					i {
+						position: relative;
+						top:-3px;
+					}
+				}
+			}
+			ul {
+				display:none;
+			}
+			&.current {
+				> ul {
+					display: block;
+				}
+			}
+		}
+	}
+	&.compress {
+		> li:first-child {
+			display: none;
+		}
+	}
+}
+
+/*   centered   */
+.link-list-centered {
+	text-align: center; 
+	.link-list > li { float: none; display: inline-block; }
+}
+
+
+.link-list-align-right {
+	text-align: right; 
+	.link-list > li { float: none; display: inline-block; }
+}
+
+/* link list in panel */
+.panel > .link-list {
+	margin-bottom:0;
+}
+.panel > .link-list.block {
+	li a {
+		color:@color-link;
+		&:hover, &:focus {
+			background:lighten(@color,5%);
+		}
+	}
+	 li.current > a {
+		color:@color-text;
+		background:darken(@color,5%);
+	}
+}
+.panel-main > .link-list.block {
+	li  a {
+		color:@color-link-main;
+		&:hover, &:focus {
+			background:lighten(@color-main,5%);
+		}
+	}
+	> li.current > a {
+		color:@color-text-main;
+		background:darken(@color-main,5%);
+	}
+}
+.panel-light > .link-list.block {
+	li  a {
+		color:@color-link-light;
+		&:hover, &:focus {
+			background:lighten(@color-light,5%);
+		}
+	}
+	 li.current > a {
+		color:@color-text-light;
+		background:darken(@color-light,5%);
+	}
+}
+.panel-dark > .link-list.block {
+	li  a {
+		color:@color-link-dark;
+		&:hover, &:focus {
+			background:lighten(@color-dark,5%);
+		}
+	}
+	 li.current > a {
+		color:@color-text-dark;
+		background:darken(@color-dark,5%);
+	}
+}
+.panel-pop > .link-list.block {
+	li  a {
+		color:@color-link-pop;
+		&:hover, &:focus {
+			background:lighten(@color-pop,5%);
+		}
+		&.caret:hover {
+			background:@color-light;
+			color:@color-pop;
+		}
+	}
+	li.current > a {
+		color:@color-text-pop;
+		background:darken(@color-pop,5%);
+	}
+}

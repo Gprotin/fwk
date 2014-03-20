@@ -1,0 +1,46 @@
+/*----------
+	$GRID MOBILE
+------------*/
+table.table, .rte table { 
+	width:100%;
+	border-collapse:collapse;
+	margin-bottom:@table-margin;
+	&.border { border:@table-border-size @table-border-type @table-border-color; }
+
+	thead {
+		background:@table-head-color;
+		color:@table-head-color-text;
+		font-family:@table-head-font;
+		.font-size(@table-head-font-size);
+		tr th, tr td {
+			font-weight:@table-head-font-weight;
+			padding:@table-head-padding;
+			text-transform: @table-head-text-transform;
+			text-align: @table-head-text-align;
+		}
+	}
+	tfoot {
+		background:@table-foot-color;
+		color:@table-foot-color-text;
+		font-family:@table-foot-font;
+		.font-size(@table-foot-font-size);
+		tr th, tr td {
+			font-weight:@table-foot-font-weight;
+			padding:@table-foot-padding;
+			text-transform: @table-foot-text-transform;
+			text-align: @table-foot-text-align;
+		}
+	}
+
+	tr td , tbody tr td {
+		padding:@table-body-padding;
+		text-transform: @table-body-text-transform;
+		text-align: @table-body-text-align;
+	}
+
+	&.zebra tbody tr:nth-child(even) {
+		background:@table-body-zebra-color;
+		color:@table-body-zebra-color-text;
+	}
+
+}

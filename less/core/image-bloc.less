@@ -1,0 +1,111 @@
+.image-bloc {
+	position:relative;
+	margin-bottom:@margin;
+	img {  
+		line-height: 0;
+		margin-bottom:-1px;
+	}
+	&.no-margin-bottom {
+		margin-bottom:-1px;
+	}
+	.hover {
+		position:absolute;
+		display: block;
+		top:0;
+		bottom:auto;
+		width:100%;
+		height:100%;
+		padding:@image-bloc-padding;
+		text-align:@image-bloc-text-align; 
+		color:@color-link;
+		&:hover {
+			color:@color-link-hover;
+		}
+		span { 
+			display:inline-block; 
+			padding:@image-bloc-link-padding; 
+			font-size:@image-bloc-font-size; 
+			font-weight:@image-bloc-font-weight; 
+			text-transform:@image-bloc-text-transform;
+			border-bottom:@image-bloc-link-border-size solid @color-link;
+		}
+		&.light {
+			background:fade(@color-light,@image-bloc-opacity);
+			color:@color-link-light;
+			&:hover {
+				color:@color-link-light-hover;
+			}
+			span {
+				border-color:@color-link-light;
+			}
+		}
+		&.dark {
+			background:fade(@color-dark,@image-bloc-opacity);
+			color:@color-text-dark;
+			&:hover {
+				color:@color-link-hover;
+			}
+			span {
+				border-color:@color-link-dark;
+			}
+		}
+		&.pop {
+			background:fade(@color-pop,@image-bloc-opacity);
+			color:@color-text-pop;
+			&:hover {
+				color:@color-link-pop-hover;
+			}
+			span {
+				border-color:@color-link-pop;
+			}
+		}
+		&.warning {
+			background:fade(@color-warning,@image-bloc-opacity);
+			color:@color-text-warning;
+			&:hover {
+				color:@color-link-warning-hover;
+			}
+			span {
+				border-color:@color-link-warning;
+			}
+		}
+		&.alert {
+			background:fade(@color-alert,@image-bloc-opacity);
+			color:@color-link-alert;
+			&:hover {
+				color:@color-link-alert-hover;
+			}
+		}
+		&.success {
+			background:fade(@color-success,@image-bloc-opacity);
+			color:@color-link-success;
+			&:hover {
+				color:@color-link-success-hover;
+			}
+			span {
+				border-color:@color-link-success;
+			}
+		}
+		&.hideable {
+			display:none;
+		}
+		&.half {
+			height:50%;
+			padding:@image-bloc-half-padding;
+		}
+		&.auto {
+			height:auto;
+			padding:@image-bloc-auto-padding;
+		}
+
+		&.bottom {
+			top:auto;
+			bottom:0;
+		}
+	}
+}
+
+
+.no-margin-bottom{
+	margin-bottom: 0;
+}

@@ -1,0 +1,85 @@
+/*----------
+	$GRID
+------------*/
+.container { 
+	padding: 0;
+}
+
+/* Row */
+.row {
+	width: 100%; 
+	max-width: @grid-max-width; 
+	min-width: @grid-min-width; 
+	margin: 0 auto;
+	.clearfix;
+	.row { min-width: 0; }
+	@gutter:@grid-gutter;
+	/* standard columns */
+	> .one 				{ .col(1) }
+	> .two 				{ .col(2) }
+	> .three 			{ .col(3) }
+	> .four 			{ .col(4) }
+	> .five 			{ .col(5) }
+	> .six 				{ .col(6) }
+	> .seven 			{ .col(7) }
+	> .eight 			{ .col(8) }
+	> .nine 			{ .col(9) }
+	> .ten 				{ .col(10) }
+	> .eleven 			{ .col(11) }
+
+	> .offset-one 		{ .col-offset(1) }
+	> .offset-two 		{ .col-offset(2) }
+	> .offset-three 	{ .col-offset(3) }
+	> .offset-four 		{ .col-offset(4) }
+	> .offset-five 		{ .col-offset(5) }
+	> .offset-six 		{ .col-offset(6) }
+	> .offset-seven 	{ .col-offset(7) }
+	> .offset-eight 	{ .col-offset(8) }
+	> .offset-nine 		{ .col-offset(9) }
+	> .offset-ten 		{ .col-offset(10) }
+	> .offset-eleven 	{ .col-offset(11) }
+}
+/* Collapsed row*/
+.row.collapse {
+		@gutter:@grid-gutter-collapse;
+
+		> .one 				{ .col(1) }
+		> .two 				{ .col(2) }
+		> .three 			{ .col(3) }
+		> .four 			{ .col(4) }
+		> .five 			{ .col(5) }
+		> .six 				{ .col(6) }
+		> .seven 			{ .col(7) }
+		> .eight 			{ .col(8) }
+		> .nine 			{ .col(9) }
+		> .ten 				{ .col(10) }
+		> .eleven 			{ .col(11) }
+		> .twelve 			{ .col(12) }
+
+		> .offset-one 		{ .col-offset(1) }
+		> .offset-two 		{ .col-offset(2) }
+		> .offset-three 	{ .col-offset(3) }
+		> .offset-four 		{ .col-offset(4) }
+		> .offset-five 		{ .col-offset(5) }
+		> .offset-six 		{ .col-offset(6) }
+		> .offset-seven 	{ .col-offset(7) }
+		> .offset-eight 	{ .col-offset(8) }
+		> .offset-nine 		{ .col-offset(9) }
+		> .offset-ten 		{ .col-offset(10) }
+		> .offset-eleven 	{ .col-offset(11) }
+}
+
+.row.full {
+	width: 100%; 
+	max-width: 100%; 
+	min-width: 100%; 
+}
+
+.column:first-child, .columns:first-child { margin-left: 0; }
+[class*="column"] + [class*="column"]:last-child { float: right; }
+[class*="column"] + [class*="column"].end { float: left; }
+
+.column.centered, .columns.centered {
+	float: none;
+	margin: 0 auto;
+}

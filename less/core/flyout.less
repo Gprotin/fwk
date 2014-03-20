@@ -1,0 +1,48 @@
+///*------------------------------------*/
+//    $PAGINATION
+///*------------------------------------*/
+
+.has-flyout { 
+	position:relative;
+	&.full-width {
+		position:static;
+		.flyout {
+			left:0;
+		}
+	}
+}
+.flyout-button { 
+	display:block; 
+}
+.flyout { 
+	display:none; 
+	position:absolute; 
+	padding:@flyout-padding; 
+	z-index:@flyout-z-index; 
+	width:@flyout-width;
+	float:none;
+	text-align:left;
+}
+
+.flyout.no-padding { padding:0; }
+.flyout.small { width:@flyout-width-small; }
+.flyout.medium { width:@flyout-width-medium; }
+.flyout.large { width:@flyout-width-large; }
+.flyout.big { width:@flyout-width-big; }
+.flyout.full-width { position: absolute; width: 100%; top: auto; left:0; }
+.flyout.right { float:none; right:0; }
+.flyout.small.center { left:50%; margin-left:(@flyout-width-small/2)*-1; }
+.flyout.medium.center { left:50%; margin-left:(@flyout-width-medium/2)*-1; }
+.flyout.large.center { left:50%; margin-left:(@flyout-width-large/2)*-1; }
+.flyout.big.center { left:50%; margin-left:(@flyout-width-big/2)*-1; }
+
+.has-flyout.panel, .has-flyout .panel { margin:0; }
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 480px) {
+	.has-flyout { position: static; }
+  	.flyout { position: absolute; width: 100%; top: auto; left:0; }
+  	.flyout.small, .flyout.medium, .flyout.large, .flyout.big { width: 100%; }
+  	.flyout.small.center, .flyout.medium.center, .flyout.large.center, .flyout.big.center  { margin:0; left:auto; }
+ }

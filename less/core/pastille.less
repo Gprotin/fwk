@@ -1,0 +1,77 @@
+.pastille-cont {
+	pointer-events:none;
+	line-height: 1;
+	position:absolute;
+	top:@pastille-cont-top-margin;
+	right:auto;
+	bottom:auto;
+	left:@pastille-cont-left-margin;
+	.pastille {
+		span {
+			padding:@pastille-padding;
+			display: inline-block;
+			font-family:@pastille-font;
+			.font-size(@pastille-font-size);
+			font-weight:@pastille-font-weight;
+			text-transform: @pastille-font-transform;
+			background:@color;
+			color:@color-text;
+			margin-bottom:@pastille-margin-bottom;
+			&.no-margin-bottom {
+				margin-bottom:0;
+			}
+			&.main {
+				background:@color-main;
+				color:@color-text-main;
+			}
+			&.light {
+				background:@color-light;
+				color:@color-text-light;
+			}
+			&.dark {
+				background:@color-dark;
+				color:@color-text-dark;
+			}
+			&.pop {
+				background:@color-pop;
+				color:@color-text-pop;
+			}
+			&.warning {
+				background:@color-warning;
+				color:@color-text-warning;
+			}
+			&.alert {
+				background:@color-alert;
+				color:@color-text-alert;
+			}
+			&.success {
+				background:@color-success;
+				color:@color-text-success;
+			}
+		}
+	}
+	&.top-right {
+		top:@pastille-cont-top-margin;
+		right:@pastille-cont-right-margin;
+		bottom:auto;
+		left:auto;
+		.pastille {
+			text-align:right;
+		}
+	}
+	&.bottom-left {
+		top:auto;
+		right:auto;
+		bottom:@pastille-cont-bottom-margin;
+		left:@pastille-cont-left-margin;
+	}
+	&.bottom-right {
+		top:auto;
+		right:@pastille-cont-right-margin;
+		bottom:@pastille-cont-bottom-margin;
+		left:auto;
+		.pastille {
+			text-align:right;
+		}
+	}
+}

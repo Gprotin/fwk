@@ -1,0 +1,11 @@
+/* DEBUG */
+#debug {
+	position:fixed;
+	top:0; left:0;
+	z-index:999999;
+	background:rgba(0,0,0,.3);
+	padding:10px;
+	color:#fff;
+}
+#debugWidth { display:block; } #debugWidth:after { content:" px"; }
+#debugHeight { display:block; } #debugHeight:after { content:" px"; }

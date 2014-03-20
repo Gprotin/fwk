@@ -1,0 +1,111 @@
+////------------------------------------*/
+//	$ALERT BOX
+////------------------------------------*/
+
+.alert-box {
+	position:relative;
+	padding:@alert-box-padding;
+	margin-bottom:@alert-box-margin;
+	background:@alert-box-color;
+	color:@alert-box-color-text;
+
+	font-family: @alert-box-font;
+	line-height: @alert-box-font-line-height;
+	.font-size(@alert-box-font-size);
+
+	a {
+		color:@alert-box-color-link;
+		&:hover { color:@alert-box-color-link-hover; }
+	}
+
+	p:last-child {
+		margin-bottom:0;
+	}
+}
+
+//   Close   */
+.closable .close {
+	position: absolute;
+	top:-5px;
+	right:5px;
+	.font-size(20);
+	font-weight:bold;
+	color:@alert-box-close-color;
+	&:hover {
+		color:@alert-box-close-color-hover;
+	}
+}
+
+
+
+//   colors   */
+.alert-box.warning {
+	background:@alert-box-color-warning;
+	color:@alert-box-color-warning-text;
+	a { 
+		color:@alert-box-color-warning-link;
+		&:hover { color:@alert-box-color-warning-link-hover; }
+	}
+}
+.alert-box.alert, .alert-box.error {
+	background:@alert-box-color-alert;
+	color:@alert-box-color-alert-text;
+	a { 
+		color:@alert-box-color-alert-link;
+		&:hover { color:@alert-box-color-alert-link-hover; }
+	}
+}
+.alert-box.success {
+	background:@alert-box-color-success;
+	color:@alert-box-color-success-text;
+	a { 
+		color:@alert-box-color-success-link;
+		&:hover { color:@alert-box-color-success-link-hover; }
+	}
+}
+
+//   shadows   */
+.alert-box.shadow {
+	.box-shadow(@alert-box-box-shadow);
+}
+.alert-box.emboss {
+	.box-shadow(@alert-box-emboss);
+}
+.alert-box.emboss.shadow {
+	.box-shadow(@alert-box-shadow-emboss);
+}
+
+.alert-box.radius {
+	.border-radius(@alert-box-border-radius);
+}
+
+.alert-box.round {
+	.border-round();
+}
+
+//   border   */
+.alert-box.border {
+	border:@alert-box-border-size @alert-box-border-type @alert-box-border-color;
+}
+.alert-box.warning.border {
+	border:@alert-box-border-size @alert-box-border-type @alert-box-border-color-warning;
+}
+.alert-box.alert.border {
+	border:@alert-box-border-size @alert-box-border-type @alert-box-border-color-alert;
+}
+.alert-box.success.border {
+	border:@alert-box-border-size @alert-box-border-type @alert-box-border-color-success;
+}
+
+.alert-box.border-large {
+	border:@alert-box-border-size-large @alert-box-border-type @alert-box-border-color;
+}
+.alert-box.warning.border-large {
+	border:@alert-box-border-size-large @alert-box-border-type @alert-box-border-color-warning;
+}
+.alert-box.alert.border-large {
+	border:@alert-box-border-size-large @alert-box-border-type @alert-box-border-color-alert;
+}
+.alert-box.success.border-large {
+	border:@alert-box-border-size-large @alert-box-border-type @alert-box-border-color-success;
+}

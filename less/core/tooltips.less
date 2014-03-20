@@ -1,0 +1,42 @@
+///*------------------------------------*/
+//    $TOOLTIPS
+///*------------------------------------*/
+
+/* tip ---------------------- */
+.has-tip { position:relative; cursor:@tooltip-cursor; }
+a.has-tip { cursor:pointer; }
+.has-tip.show { border-bottom:1px dotted @tooltip-border-color; }
+.has-tip:hover, .has-tip:focus {  }
+.has-tip.tip-left, .has-tip.tip-right { float: none !important; }
+
+/* Tooltips ---------------------- */
+.tooltip { 
+	display: none; 
+	position: absolute; 
+	padding: @tooltip-padding;
+	background: @tooltip-color;
+	color:  @tooltip-text-color; 
+	font-size: 12px; 
+	z-index: 999;
+	border:1px solid @tooltip-border-color;
+	.border-radius(@tooltip-border-radius);
+}
+
+.tooltip > .nub { 
+	display: block; 
+	width: 0; 
+	height: 0; 
+	border: solid @tooltip-nub-size; 
+	border-color: transparent transparent @tooltip-color transparent;
+	position: absolute; 
+	top: -10px; 
+	left: 10px; 
+}
+.tooltip.tip-override > .nub { border-color: transparent transparent @tooltip-color transparent !important; top: -10px !important; }
+.tooltip.tip-top > .nub, .tooltip.tip-centered-top > .nub { border-color: @tooltip-color transparent transparent transparent; top: auto; bottom: -10px; }
+.tooltip.tip-left, .tooltip.tip-right { float: none !important; }
+.tooltip.tip-left > .nub { border-color: transparent transparent transparent @tooltip-color; right: -10px; left: auto; }
+.tooltip.tip-right > .nub { border-color: transparent @tooltip-color transparent transparent; right: auto; left: -10px; }
+.tooltip.noradius { .border-radius(0); }
+
+.tap-to-close { display: block; .font-size(@font-size-small); color: @tooltip-text-color; font-weight: @tooltip-font-weight; }

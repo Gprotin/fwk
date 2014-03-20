@@ -1,0 +1,92 @@
+/////*------------------------------------*/
+//	$MIXINS
+/////*------------------------------------*/
+
+///* font-size */
+.font-size(@sizeValue) {
+	@font-size-rem :(@sizeValue/10);
+  	font-size:~"@{sizeValue}px";
+  	font-size:~"@{font-size-rem}rem";
+}
+
+///* Border box */
+.border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	*behavior: url(/js/boxsizing.htc);
+}
+
+///*-- Clearfix  --*/
+.clearfix {
+    zoom: 1;
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.border-radius(@radius:@border-radius) {
+	-webkit-border-radius: @radius;
+ 	   -moz-border-radius: @radius;
+	    -ms-border-radius: @radius;
+	     -o-border-radius: @radius;
+	        border-radius: @radius;
+}
+.border-round(@radius:1000px) {
+	-webkit-border-radius: @radius;
+ 	   -moz-border-radius: @radius;
+	    -ms-border-radius: @radius;
+	     -o-border-radius: @radius;
+	        border-radius: @radius;
+}
+
+.box-shadow(@shadow:@box-shadow) {
+	-webkit-box-shadow:@shadow;
+	   -moz-box-shadow:@shadow;
+	    -ms-box-shadow:@shadow;
+	     -o-box-shadow:@shadow;
+	        box-shadow:@shadow;
+}
+
+///*----------
+//	$MIXIN GRID
+//------------*/
+.col(@numCol) {
+	float: left;
+	min-height: 1px; 
+	position: relative;
+	margin:0 auto;
+	margin-left: @gutter;
+	width: (100-((@grid-nb-cols/@numCol)-1)*@gutter)/(@grid-nb-cols/@numCol);
+}
+.col-offset(@numCol) {
+	margin-left: (100-((@grid-nb-cols/@numCol)-1)*@gutter)/(@grid-nb-cols/@numCol)+(@gutter*2);
+}
+.col-phone(@numCol) {
+	float: left;
+	min-height: 1px; 
+	position: relative;
+	margin:5px auto;
+	margin-left: @gutter;
+	width: (100-((@grid-nb-cols-phone/@numCol)-1)*@gutter)/(@grid-nb-cols-phone/@numCol);
+}
+
+.bloc-grid(@nb-grid) {
+	margin-left:@gutter;
+	width:(100/@nb-grid)-@gutter;
+}
+
+.link-grid(@nb-grid) {
+	margin-left:@gutter;
+	width:(100/@nb-grid)-@gutter;
+}
+
+.mason-grid(@nb-grid-mason) {
+	margin-left:@gutter;
+	margin-bottom:@gutter;
+	width:(100/@nb-grid-mason)-@gutter;
+}

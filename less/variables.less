@@ -1,0 +1,734 @@
+///*------------------------------------*/
+////	$VARIABLES
+///*------------------------------------*/
+
+///*------------------------------------*/
+//	$MARGIN
+///*------------------------------------*/
+/*   $Margin   */
+@margin 				:10px;
+@margin-large  			:(@margin*2);
+@margin-small  			:(@margin/2);
+@margin-font    		:@margin;
+@margin-font-large    	:(@margin-font*2);
+@margin-font-small    	:(@margin-font/2);
+
+/*   $padding   */
+@padding 					:10px;
+@padding-large 				:(@padding*2);
+@padding-small 				:(@padding/2);
+@padding-panel 				:@padding;
+@padding-panel-large 		:(@padding-panel*2);  
+@padding-panel-small 		:(@padding-panel/2);
+
+
+///*------------------------------------*/
+//	$BASE
+///*------------------------------------*/
+/*   $default   */
+@default-line-height 		:1;
+
+
+
+///*------------------------------------*/
+//	$MISC
+///*------------------------------------*/
+/*   $radius   */
+@border-radius              :3px;
+@box-shadow                 :0 0px 5px rgba(0,0,0,.30);
+@box-emboss                 :0 1px 1px 0px rgba(255,255,255,.7) inset;
+@box-shadow-emboss          :0 1px 1px 0px rgba(255,255,255,.7) inset, 0 2px 2px rgba(0,0,0,.20);
+@box-shadow-button          :0px 0px 1px rgba(0,0,0,0.2);
+@box-shadow-button-hover    :0px 2px 2px rgba(0,0,0,0.25);
+@box-shadow-button-active   :0px 2px 3px rgba(0,0,0,0.2) inset;
+@border-size                :1px;
+@border-size-large          :3px;
+@border-type                :solid;
+
+
+///*------------------------------------*/
+//	$COLORS
+///*------------------------------------*/
+
+/*   $colors-background   */
+@color 			:#ffffff;
+@color-main 	:#979797;
+@color-light 	:#EBEBEB;
+@color-dark 	:#020202;
+@color-pop 		:#ED008C;
+@color-alert    :#c0392b;
+@color-warning 	:#EC5F2F;
+@color-success 	:#29C728;
+
+/*   $colors-borders   */
+@color-border 			:darken(@color,20%);
+@color-border-main 		:darken(@color-main,20%);
+@color-border-light 	:darken(@color-light,50%);
+@color-border-dark 		:darken(@color-dark,20%);
+@color-border-pop 		:darken(@color-pop,25%);
+@color-border-warning   :darken(@color-warning,20%);
+@color-border-alert 	:darken(@color-alert,20%);
+@color-border-success 	:darken(@color-success,20%);
+
+/*   $colors-texts   */
+@color-text             :darken(@color,70%);
+@color-text-main        :lighten(@color-main,65%);
+@color-text-light       :darken(@color-light,70%);
+@color-text-dark        :lighten(@color-dark,70%);
+@color-text-pop         :lighten(@color-pop,75%);
+@color-text-warning     :lighten(@color-warning,40%);
+@color-text-alert       :lighten(@color-alert,60%);
+@color-text-success     :lighten(@color-success,80%);
+
+/*   $colors-links  */
+@color-link 				:darken(@color-text,50%);
+@color-link-hover 			:daren(@color-link,10%);
+
+@color-link-main 			:lighten(@color-text-main,30%);
+@color-link-main-hover 		:darken(@color-link-main,15%);
+
+@color-link-light 			:darken(@color-text-light,50%);
+@color-link-light-hover 	:lighten(@color-link-light,10%);
+
+@color-link-dark 			:lighten(@color-text-dark,80%);
+@color-link-dark-hover 		:lighten(@color-link-dark,20%);
+
+@color-link-pop 			:lighten(@color-text-pop,30%);
+@color-link-pop-hover 		:darken(@color-link-pop,10%);
+
+@color-link-warning         :darken(@color-text-warning,75%);
+@color-link-warning-hover   :lighten(@color-link-warning,10%);
+
+@color-link-alert 			:darken(@color-text-alert,75%);
+@color-link-alert-hover 	:lighten(@color-link-alert,10%);
+
+@color-link-success 		:lighten(@color-text-success,75%);
+@color-link-success-hover 	:darken(@color-link-success,10%);
+
+/*   $colors-buttons   */
+@color-button 								:@color;
+@color-button-hover 						:lighten(@color-button,10%);
+@color-button-gradient 						:linear-gradient( to bottom , lighten(@color,5%), darken(@color,5%));
+@color-button-gradient-hover				:linear-gradient( to bottom , lighten(@color,10%), darken(@color,10%));
+@color-button-gradient-active 				:linear-gradient( to top , lighten(@color,10%), darken(@color,5%));
+
+@color-button-main 							:@color-main;
+@color-button-main-hover 					:darken(@color-button-main,5%);
+@color-button-main-gradient 				:linear-gradient( to bottom , lighten(@color-main,5%), darken(@color-main,5%));
+@color-button-main-gradient-hover 			:linear-gradient( to bottom , lighten(@color-main,10%), darken(@color-main,10%));
+@color-button-main-gradient-active 			:linear-gradient( to top , lighten(@color-main,10%), darken(@color-main,5%));
+
+@color-button-light 						:@color-light;
+@color-button-light-hover 					:lighten(@color-button-light,10%);
+@color-button-light-gradient 				:linear-gradient( to bottom , lighten(@color-light,5%), darken(@color-light,5%));
+@color-button-light-gradient-hover 			:linear-gradient( to bottom , lighten(@color-light,10%), darken(@color-light,10%));
+@color-button-light-gradient-active 		:linear-gradient( to top , lighten(@color-light,10%), darken(@color-light,5%));
+
+@color-button-dark 							:@color-dark;
+@color-button-dark-hover 					:lighten(@color-button-dark,10%);
+@color-button-dark-gradient					:linear-gradient( to bottom , lighten(@color-dark,5%), darken(@color-dark,5%));
+@color-button-dark-gradient-hover			:linear-gradient( to bottom , lighten(@color-dark,10%), darken(@color-dark,10%));
+@color-button-dark-gradient-active			:linear-gradient( to top , lighten(@color-dark,10%), darken(@color-dark,5%));
+
+@color-button-pop 							:@color-pop;
+@color-button-pop-hover 					:lighten(@color-button-pop,10%);
+@color-button-pop-gradient 					:linear-gradient( to bottom , lighten(@color-pop,5%), darken(@color-pop,5%));
+@color-button-pop-gradient-hover 			:linear-gradient( to bottom , lighten(@color-pop,10%), darken(@color-pop,10%));
+@color-button-pop-gradient-active 			:linear-gradient( to top , lighten(@color-pop,10%), darken(@color-pop,5%));
+
+@color-button-warning                       :@color-warning;
+@color-button-warning-hover                 :lighten(@color-button-warning,10%);
+@color-button-warning-gradient              :linear-gradient( to bottom , lighten(@color-warning,5%), darken(@color-warning,5%));
+@color-button-warning-gradient-hover        :linear-gradient( to bottom , lighten(@color-warning,10%), darken(@color-warning,10%));
+@color-button-warning-gradient-active       :linear-gradient( to top , lighten(@color-warning,10%), darken(@color-warning,5%));
+
+@color-button-alert 						:@color-alert;
+@color-button-alert-hover 					:lighten(@color-button-alert,10%);
+@color-button-alert-gradient 				:linear-gradient( to bottom , lighten(@color-alert,5%), darken(@color-alert,5%));
+@color-button-alert-gradient-hover 			:linear-gradient( to bottom , lighten(@color-alert,10%), darken(@color-alert,10%));
+@color-button-alert-gradient-active 		:linear-gradient( to top , lighten(@color-alert,10%), darken(@color-alert,5%));
+
+@color-button-success 						:@color-success;
+@color-button-success-hover 				:lighten(@color-success,10%);
+@color-button-success-gradient 				:linear-gradient( to bottom , lighten(@color-success,5%), darken(@color-success,5%));
+@color-button-success-gradient-hover 		:linear-gradient( to bottom , lighten(@color-success,10%), darken(@color-success,10%));
+@color-button-success-gradient-active 		:linear-gradient( to top , lighten(@color-success,10%), darken(@color-success,5%));
+
+@color-button-disabled 						:#ccc;
+
+/*   $colors-buttons-text   */
+@color-button-text 			:@color-text;
+@color-button-text-main 	:darken(@color-button-main,40%);
+@color-button-text-light 	:darken(@color-button-light,80%);
+@color-button-text-dark 	:lighten(@color-button-dark,80%);
+@color-button-text-pop 		:lighten(@color-button-pop,80%);
+@color-button-text-warning  :lighten(@color-button-warning,80%);
+@color-button-text-alert 	:lighten(@color-button-alert,80%);
+@color-button-text-success 	:lighten(@color-button-success,80%);
+
+/*   $misc   */
+@color-misc-selection-color 		:@color-pop;
+@color-misc-selection-color-text 	:@color-text-pop;
+
+
+
+
+///*------------------------------------*/
+//	$TYPOGRAPHY
+///*------------------------------------*/
+
+/*   $fonts   */
+@font 						:'Open Sans', sans-serif;
+@font-color-defaut          :@color-dark;
+@font-size 					:12;
+@font-size-lead 			:16;
+@font-size-big 				:20;
+@font-size-small 			:12;
+@font-line-height 			:1.6;
+@font-line-height-lead 		:1.8;
+@font-line-height-big 		:2.2;
+@font-line-height-small 	:1.1;
+@font-weight 				:normal;
+
+/*   $links   */
+@link-decoration 			:none;
+@link-border-bottom 		:none;
+@link-padding 				:0;
+
+/*   $fonts-heading   */
+@font-heading 					:'Sorts Mill Goudy', serif;
+@font-heading-transform 		:normal;
+@font-heading-weight 			:700;
+@font-heading-line-height 		:1.1;
+@font-heading-size-h1 			:round(@font-size * 2);
+@font-heading-size-h2 			:round(@font-size * 1.7);
+@font-heading-size-h3 			:round(@font-size * 1.4);
+@font-heading-size-h4 			:round(@font-size * 1.1);
+@font-heading-size-h5 			:@font-size;
+@font-heading-size-h6			:round(@font-size * 0.8);
+
+/*  $fonts-buttons   */
+@font-button 					:@font;
+@font-button-weight 			:bold;
+@font-button-size 				:round(@font-size*1.14);
+@font-button-size-large 		:round(@font-size*2);
+@font-button-size-medium 		:round(@font-size*1.7);
+@font-button-size-small 		:round(@font-size*0.8);
+
+/*   $horizontal-rule   */
+@hr-width 				:100%;
+@hr-width-small 		:40%;
+@hr-width-tiny 			:10%;
+@hr-border-height 		:1px;
+@hr-border-large-height	:3px;
+@hr-height 				:0;
+@hr-color 				:@color-main;
+@hr-color-second 		:@color-pop;
+@hr-margin 				:@margin;
+@hr-large-margin 		:(@margin*2);
+@hr-type 				:solid;
+
+
+
+
+/*----------
+	$GRID
+------------*/
+
+@grid-max-width 		:1024px;
+@grid-min-width 		:727px;
+@grid-nb-cols 			:12;
+@grid-nb-cols-phone 	:6;
+@grid-gutter 			:2%;
+@grid-gutter-collapse 	:0%;
+
+@masonry-loader 		:'images/loader.gif';
+@masonry-loader-margin 	:40px 0;
+
+@block-grid-margin-bottom 	:10px;
+
+
+
+
+/*----------
+//	$BUTTONS
+------------*/
+@button-border-radius       :@border-radius;
+@button-line-height         :1;
+@button-text-align          :center;
+@button-padding             :7px 15px 8px;
+@button-padding-large       :10px 30px 11px;
+@button-padding-medium      :@button-padding;
+@button-padding-small       :7px 14px 8px;
+
+@button-box-shadow          :@box-shadow-button;
+@button-box-shadow-hover    :@box-shadow-button-hover ;
+@button-box-shadow-active   :@box-shadow-button-active;
+
+@button-group-margin 		:0 0 12px;
+@button-group-border-radius	:@border-radius;
+
+
+
+
+
+/*----------
+	$PANELS
+------------*/
+@panel-border-radius        :@border-radius;
+@panel-border-size          :@border-size;
+@panel-border-type          :@border-type;
+@panel-shadow               :0 2px 0 rgba(0,0,0,.15);
+@panel-emboss               :@box-emboss;
+@panel-shadow-emboss        :@box-shadow-emboss;
+
+@panel-img-bg 				:'';
+@panel-main-img-bg 			:'url(../img/tools/bg-panel-main.jpg) repeat top left';
+@panel-light-img-bg 		:'';
+@panel-dark-img-bg 			:'';
+@panel-pop-img-bg 			:'';
+
+
+
+/*----------
+	$TOOLTIPS
+------------*/
+@tooltip-padding 			:@padding-small;
+@tooltip-color 				:@color-pop;
+@tooltip-text-color			:@color-text-pop;
+@tooltip-border-color		:@color-border-pop;
+@tooltip-font 				:@font;
+@tooltip-font-size 			:@font-size;
+@tooltip-font-line-height 	:@font-line-height;
+@tooltip-font-weight 	 	:@font-weight;
+@tooltip-border-radius 		:@border-radius;
+@tooltip-nub-size           :5px;
+@tooltip-cursor 	 		:help;
+
+
+
+
+/*----------
+	$LABELS
+------------*/
+@label-padding 				:1px 10px 2px;
+@label-font-size 			:@font-size;
+@label-font-weight 			:@font-weight;
+@label-text-align			:center; 
+@label-text-decoration		:none; 
+@label-text-transform		:uppercase; 
+@label-font-line-height		:1; 
+@label-color 				:@color;
+@label-color-text			:#fff;
+@label-border-radius		:@border-radius;
+
+
+
+/*----------
+//	$GOOGLE MAPS
+------------*/
+@gmap-height            :200px;
+@gmap-margin            :@margin;
+@gmap-background        :@color;
+@gmap-border-color      :@color-pop;
+@gmap-border-type       :@border-type;
+@gmap-border-size       :@border-size;
+@gmap-border-size-large :@border-size-large;
+@gmap-shadow            :@box-shadow;
+
+
+
+/*----------
+//	$ALERT-BOX
+------------*/
+@alert-box-margin                       :@margin;
+@alert-box-margin-large                 :@margin;
+@alert-box-padding                      :@padding;
+@alert-box-padding-large                :@padding-large;
+@alert-box-color                        :@color;
+@alert-box-color-text                   :@color-text;
+@alert-box-color-link                   :@color-link;
+@alert-box-color-link-hover             :@color-link-hover;
+@alert-box-color-warning                :@color-warning;
+@alert-box-color-warning-border         :@color-border-warning;
+@alert-box-color-warning-text           :@color-text-warning;
+@alert-box-color-warning-link           :@color-link-warning;
+@alert-box-color-warning-link-hover     :@color-link-warning-hover;
+@alert-box-color-alert                  :@color-alert;
+@alert-box-color-alert-border           :@color-border-alert;
+@alert-box-color-alert-text             :@color-text-alert;
+@alert-box-color-alert-link             :@color-link-alert;
+@alert-box-color-alert-link-hover       :@color-link-alert-hover;
+@alert-box-color-success                :@color-success;
+@alert-box-color-success-border         :@color-border-success;
+@alert-box-color-success-text           :@color-text-success;
+@alert-box-color-success-link           :@color-link-success;
+@alert-box-color-success-link-hover     :@color-link-success-hover;
+
+@alert-box-border-color                 :@color-border;
+@alert-box-border-color-warning         :@color-border-warning;
+@alert-box-border-color-alert           :@color-border-alert;
+@alert-box-border-color-success         :@color-border-success;
+@alert-box-border-size                  :@border-size;
+@alert-box-border-size-large            :@border-size-large;
+@alert-box-border-type                  :@border-type;
+
+@alert-box-font                         :@font;
+@alert-box-font-size                    :@font-size;
+@alert-box-font-weight                  :@font-weight;
+@alert-box-font-line-height             :@font-line-height;
+
+@alert-box-border-radius                :@border-radius;
+@alert-box-box-shadow                   :@box-shadow;
+@alert-box-emboss                       :@box-emboss;
+@alert-box-shadow-emboss                :@box-shadow-emboss;
+
+@alert-box-close-color                  :#4d4d4d;
+@alert-box-close-color-hover            :lighten(@alert-box-close-color,80%);
+
+
+/*----------
+//	$PAGINATION
+------------*/
+@pagination-margin                          :@margin;
+@pagination-padding                         :3px 10px ;
+
+@pagination-color                           :transparent;
+@pagination-color-hover                     :@color;
+@pagination-color-link                      :@color;
+@pagination-color-link-hover                :@color-link;
+
+@pagination-color-current                   :@color;
+@pagination-color-current-link              :@color-text;
+
+@pagination-color-unavailable               :transparent;
+@pagination-color-unavailable-link          :#ccc;
+
+
+@pagination-font                            :@font;
+@pagination-font-weight                     :@font-weight;
+
+@pagination-border-size                     :@border-size;
+@pagination-border-type                     :@border-type;
+@pagination-border-color                    :@color-border;
+
+
+/*----------
+//	$BREADCRUMBS
+------------*/ 
+@breadcrumbs-padding                :0;
+@breadcrumbs-margin                 :@margin;
+@breadcrumbs-padding-li             :5px; 
+@breadcrumbs-font                   :@font-heading;
+@breadcrumbs-font-size              :12;
+@breadcrumbs-font-style             :uppercase;
+@breadcrumbs-padding-element        :5px;
+@breadcrumbs-content                :'/ ';
+@breadcrumbs-current-color			:@color-text-light;
+@breadcrumbs-link-color 			:@color-link-light;
+@breadcrumbs-link-color-hover 		:@color-link-light-hover;
+@breadcrumbs-content-color          :#ccc;
+@breadcrumbs-color-unavailable      :#999; 
+
+
+///*------------------------------------*/
+//	$NAVIGATION
+///*------------------------------------*/
+/*   $link-nav   */
+@link-nav-margin                        :0;
+@link-nav-padding                       :0;
+@link-nav-font                          :@font;
+@link-nav-font-size                     :12;
+@link-nav-text-transform 				:uppercase;
+@link-nav-a-padding                     :5px;
+@link-nav-a-padding-mobile              :10px 0;
+@link-nav-1-width                       :250px;
+@link-nav-1-zindex                      :42;
+@link-nav-mobile-padding                :10px;
+@link-nav-2-margin                      :12px;
+
+@link-nav-search-width                  :270px; 
+
+/*   $link-list   */
+@link-list-margin 						:@margin;
+@link-list-font 						:@font;
+@link-list-font-size 					:@font-size;
+@link-list-a-padding 					:7px;
+@link-list-vertical-a-padding			:7px;
+@link-list-vertical-caret-padding		:10px 10px 7px;
+
+
+
+
+///*------------------------------------*/
+//	$FLYOUT
+///*------------------------------------*/
+ @flyout-padding                        :@padding;
+ @flyout-z-index                        :9999;
+ @flyout-width                    		:100%;
+ @flyout-width-small                    :200px;
+ @flyout-width-medium                   :300px;
+ @flyout-width-large                    :400px;
+ @flyout-width-big                      :500px;
+
+
+
+
+///*------------------------------------*/
+//	$FORMS
+///*------------------------------------*/
+@form-margin 						:@margin;
+@form-label-font-weight 			:@font-weight;
+@form-label-margin 					:10px;
+@form-label-inline-margin 			:0 0 12px 0;
+
+@form-prefix-zindex 				:10;
+@form-prefix-text-align 			:center;
+@form-prefix-color 					:@color-light;
+@form-prefix-border-size 			:@border-size;
+@form-prefix-border-type 			:@border-type;
+@form-prefix-border-color 			:@color-border-light;
+@form-prefix-border-radius 			:@border-radius;
+
+@form-input-height 					:32px;
+@form-input-margin 					:0 0 10px;
+@form-input-padding 				:0 3px;
+@form-input-font 					:@font;
+@form-input-font-size 				:@font-size;
+@form-input-border-size 			:@border-size;
+@form-input-border-type 			:@border-type;
+@form-input-border-color 			:@color-border-light;
+@form-input-border-radius 			:@border-radius;
+@form-input-box-shadow 				:inset 0 1px 2px rgba(0, 0, 0, 0.1);
+@form-input-color-text 				:@color-dark;
+@form-input-font-size-oversize 		:@form-input-font-size+2;
+@form-input-color-focus 			:#fff;
+@form-input-border-color-focus 		:@color-border-dark;
+@form-input-color-disabled 			:#d9d9d9;
+
+@form-textarea-padding 				:3px;
+@form-select-padding 				:5px;
+
+
+
+
+///*------------------------------------*/
+//	$TABLE
+///*------------------------------------*/
+@table-margin 						:@margin;
+@table-padding 						:0;
+@table-color 						:transparent;
+@table-border-size 					:@border-size;
+@table-border-type 					:@border-type;
+@table-border-radius				:@border-radius;
+@table-border-color 				:@color-border;
+@table-color 						:@color;
+@table-color-text					:@color-text;
+
+@table-head-padding 	 			:5px 10px;
+@table-head-font 		 			:@font;
+@table-head-font-size	 			:@font-heading-size-h4;
+@table-head-font-weight	 			:@font-weight;
+@table-head-text-transform 			:uppercase;
+@table-head-text-align  			:center;
+@table-head-color  					:@color-dark;
+@table-head-color-text  			:@color-text-dark;
+
+@table-foot-padding 	 			:5px 10px;
+@table-foot-font 		 			:@font;
+@table-foot-font-size	 			:@font-size;
+@table-foot-font-weight	 			:@font-weight;
+@table-foot-text-transform 			:none;
+@table-foot-text-align  			:left;
+@table-foot-color  					:@color-light;
+@table-foot-color-text  			:@color-text-light;
+
+@table-body-padding 	 			:5px 10px;
+@table-body-text-transform 			:none;
+@table-body-text-align  			:left;
+@table-body-color 	 	 			:transparent;
+@table-body-color-text 	 			:@color;
+@table-body-zebra-color	  			:#f9f9f9;
+@table-body-zebra-color-text		:@color;
+
+
+///*------------------------------------*/
+//	$FLEXSLIDER
+///*------------------------------------*/
+@flexslider-margin                                  :@margin;
+@flexslider-padding                                 :0;
+
+@flexslider-carousel-margin                         :5px;
+
+@flexslider-direction-nav-width                     :30px;
+@flexslider-direction-nav-height                    :30px;
+@flexslider-direction-nav-background                :url(../img/tools/bg_direction_nav.png) no-repeat 0 0;
+@flexslider-direction-nav-top                       :50%;
+@flexslider-direction-nav-opacity                   :0;
+@flexslider-direction-nav-opactiy-hover             :1;
+@flexslider-direction-nav-position                  :5px;
+
+@flexslider-control-nav-text-align                  :center;
+@flexslider-control-nav-margin                      :@margin-small;
+@flexslider-control-nav-width                       :11px;
+@flexslider-control-nav-height                      :11px;
+@flexslider-control-nav-background                  :transparent;
+@flexslider-control-nav-border-size                 :2px;
+@flexslider-control-nav-border-type                 :@border-type;
+@flexslider-control-nav-color-border                :@color-pop;
+@flexslider-control-nav-background-hover            :@color-pop;
+@flexslider-control-nav-border-size-hover           :2px;
+@flexslider-control-nav-border-type-hover           :@border-type;
+@flexslider-control-nav-color-border-hover          :@color-pop;
+
+@flexslider-control-thumb-margin                    :0;
+@flexslider-control-thumb-width                     :25%;
+@flexslider-control-thumb-opacity                   :.6;
+@flexslider-control-thumb-opacity-hover             :1;
+
+
+
+///*------------------------------------*/
+//	$PASTILLE
+///*------------------------------------*/
+@pastille-cont-top-margin 		:10px;
+@pastille-cont-left-margin 		:0;
+@pastille-cont-bottom-margin 	:10px;
+@pastille-cont-right-margin 	:0;
+@pastille-margin-bottom 		:10px;
+@pastille-padding 		 		:5px 10px;
+@pastille-font 					:@font;
+@pastille-font-size				:14;
+@pastille-font-weight			:900;
+@pastille-font-transform		:uppercase;
+
+
+
+///*------------------------------------*/
+//	$IMAGE BLOC
+///*------------------------------------*/
+@image-bloc-opacity 			:55%;
+@image-bloc-half-height			:50%;
+@image-bloc-text-align 			:center;
+@image-bloc-padding 			:25% 0;
+@image-bloc-half-padding 		:15% 0;
+@image-bloc-auto-padding 		:10px;
+@image-bloc-link-padding 		:0 0 3px;
+@image-bloc-font-size 			:@font-size;
+@image-bloc-font-weight 		:700;
+@image-bloc-text-transform 		:uppercase;
+@image-bloc-link-border-size 	:3px;
+
+
+
+///*------------------------------------*/
+//	$CHOSEN
+///*------------------------------------*/
+@chosen-background 				:#fff;
+@chosen-drop-zindex 			:9999;
+@chosen-border-size 			:@form-input-border-size;
+@chosen-border-type 			:@form-input-border-type;
+@chosen-border-color 			:@form-input-border-color;
+@chosen-box-shadow 				:@form-input-box-shadow ;
+@chosen-height 					:@form-input-height;
+@chosen-sprite-path 			:'';
+@chosen-multi-height 			:@form-input-height;
+@chosen-focus-border 			:@form-input-border-color-focus;
+
+
+
+///*------------------------------------*/
+//	$ANIMATE
+///*------------------------------------*/
+@animate-duration 					:1s;
+@animate-duration-large				:2s;
+@animate-duration-small				:0.5s;
+@animate-duration-lightspeed		:0.25s;
+
+
+
+
+///*------------------------------------*/
+//	$JQUERY UI
+///*------------------------------------*/
+@jquery-ui-font 						:@font;
+
+@jquery-ui-color-content 				:@color-light;
+@jquery-ui-color-text 	 				:@color-text-light;
+@jquery-ui-color-link 	 				:@color-link-light;
+@jquery-ui-border-size 					:@border-size;
+@jquery-ui-border-type 					:@border-type;
+@jquery-ui-border-color 				:@color-border-light;
+@jquery-ui-border-radius 				:0;
+
+@jquery-ui-color-header 				:@color-pop;
+@jquery-ui-color-header-text			:@color-text-pop;
+@jquery-ui-color-header-link			:@color-link-pop;
+
+@jquery-ui-button-highlight-color			:@color-pop;
+@jquery-ui-button-highlight-border-color	:@color-border-pop;
+@jquery-ui-button-highlight-link-color		:@color-link-pop;
+@jquery-ui-button-highlight-text-color		:@color-text-pop;
+@jquery-ui-header-margin					:@margin-small;
+
+
+
+
+
+
+///*------------------------------------*/
+//	$datepicker
+///*------------------------------------*/
+@datepicker-width 						:250px;
+@datepicker-padding 					:4px;
+@datepicker-margin-top 					:1px;
+@datepicker-border-radius 				:@border-radius;
+
+@datepicker-font-size 					:@font-size;
+@datepicker-background 					:@color-light;
+@datepicker-background-header			:@color-pop;
+
+
+
+///*------------------------------------*/
+//	$price-tag
+///*------------------------------------*/
+@price-tag-margin 						:@margin;
+@price-tag-padding 						:@padding;
+@price-tag-font-size 					:@font-size;
+@price-tag-font-size-lead 				:@font-size-lead;
+
+
+
+
+
+/*------------------------------------*\
+    $TABS
+\*------------------------------------*/
+@tabs-margin 					:0;
+@tabs-link-align 				:center;
+@tabs-link-font-weight 			:bold;
+@tabs-link-padding 				:15px 5px;
+@tabs-link-color 				:@color-link;
+@tabs-link-background			:@color;
+@tabs-link-color-hover 			:@color-text-pop;
+@tabs-link-background-hover		:@color-pop;
+
+
+
+///*------------------------------------*/
+//	$ELEMENT
+///*------------------------------------*/
+/*   $Body   */
+@body-background        :#fff repeat top left;
+@body-color 		    :@font-color-defaut;
+@logo-padding 			:5px 0;
+
+
+
+
+
+
+
+
+
